@@ -82,6 +82,13 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px; /* adjust based on navbar height */
+}
+
 body {
   margin: 0;
   padding: 0;
