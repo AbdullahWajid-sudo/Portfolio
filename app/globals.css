@@ -1,5 +1,68 @@
 @import "tailwindcss";
 
+@theme {
+  --color-on-secondary-fixed: #1a1b22;
+  --color-surface-container-high: #2a2a2b;
+  --color-surface-dim: #131314;
+  --color-on-secondary: #2f3037;
+  --color-outline-variant: #424754;
+  --color-secondary-fixed-dim: #c6c6cf;
+  --color-error: #ffb4ab;
+  --color-on-surface: #e5e2e3;
+  --color-surface-bright: #3a393a;
+  --color-on-error-container: #ffdad6;
+  --color-on-tertiary: #00390c;
+  --color-secondary-container: #45464e;
+  --color-inverse-surface: #e5e2e3;
+  --color-on-surface-variant: #c2c6d6;
+  --color-tertiary-fixed: #6fff7a;
+  --color-on-background: #e5e2e3;
+  --color-on-tertiary-fixed: #002205;
+  --color-on-primary-container: #00285d;
+  --color-tertiary-fixed-dim: #00e54b;
+  --color-primary-container: #4d8eff;
+  --color-inverse-primary: #005ac2;
+  --color-background: #131314;
+  --color-inverse-on-surface: #313031;
+  --color-secondary: #c6c6cf;
+  --color-surface-container-lowest: #0e0e0f;
+  --color-on-primary-fixed-variant: #004395;
+  --color-on-error: #690005;
+  --color-surface-container-low: #1c1b1c;
+  --color-tertiary: #00e54b;
+  --color-surface-variant: #353436;
+  --color-on-primary-fixed: #001a42;
+  --color-surface-tint: #adc6ff;
+  --color-error-container: #93000a;
+  --color-on-primary: #002e6a;
+  --color-secondary-fixed: #e2e1eb;
+  --color-primary: #adc6ff;
+  --color-on-secondary-fixed-variant: #45464e;
+  --color-surface-container: #201f20;
+  --color-outline: #8c909f;
+  --color-surface: #131314;
+  --color-on-tertiary-container: #003209;
+  --color-primary-fixed-dim: #adc6ff;
+  --color-surface-container-highest: #353436;
+  --color-tertiary-container: #00a834;
+  --color-on-secondary-container: #b4b4bd;
+  --color-on-tertiary-fixed-variant: #005315;
+  --color-primary-fixed: #d8e2ff;
+
+  --raduis-DEFAULT: 0.125rem;
+  --radius-sm: 0.125rem;
+  /* --radius-md: 0.125rem; */
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  /* --radius-2xl: 0.125rem; */
+  /* --radius-3xl: 0.125rem; */
+  --radius-full: 0.75rem;
+
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,7 +83,70 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-headline);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+.plasma-bg {
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(156, 72, 234, 0.15) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(106, 39, 133, 0.1) 0%,
+      transparent 40%
+    );
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Card Effect */
+.glass-card {
+  background: rgba(53, 52, 54, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xl);
+}
+
+/* 4. Radius Shortcuts (Since you aren't using Tailwind Config) */
+.rounded-default {
+  border-radius: var(--radius-default);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+.text-glow {
+  text-shadow: 0 0 20px rgba(173, 198, 255, 0.3);
+}
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(173, 198, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(173, 198, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
