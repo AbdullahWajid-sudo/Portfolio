@@ -1,3 +1,7 @@
+"use client";
+
+import { TypeAnimation } from "react-type-animation";
+
 export default function Hero() {
   return (
     <main>
@@ -10,16 +14,36 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/20">
               <span className="w-2 h-2 rounded-full bg-tertiary"></span>
               <span className="text-[10px] uppercase tracking-[0.2em] font-label text-tertiary">
-                Available for projects
+                Available for high-impact builds
               </span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-headline font-bold leading-[0.9] tracking-tighter text-glow">
-              I BUILD <br /> <span className="text-primary">DIGITAL</span>{" "}
-              <br /> EXPERIENCES.
-            </h1>
+            <div className="flex flex-col gap-0">
+              <h1 className="text-6xl md:text-8xl font-headline font-bold leading-none tracking-tighter text-glow">
+                I CREATE
+              </h1>
+              <h1 className="text-6xl md:text-8xl font-headline font-bold leading-none tracking-tighter text-glow text-primary min-h-45 md:min-h-45">
+                <div className="block w-120">
+                  <TypeAnimation
+                    sequence={[
+                      "AI Web Apps.",
+                      2000,
+                      "Smart Interfaces.",
+                      2000,
+                      "Next-Gen Apps.",
+                      2000,
+                      "Scalable Systems.",
+                      2000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
+                </div>
+              </h1>
+            </div>
             <p className="text-on-surface-variant text-lg max-w-md font-light leading-relaxed">
-              Architecting high-performance web applications with a focus on
-              immersive aesthetics and technical precision.
+              Crafting high-performance digital systems that blend speed,
+              intelligence, and refined design.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="bg-primary text-on-primary-fixed px-8 py-4 rounded-lg font-headline font-bold flex items-center gap-2 shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform">
@@ -35,7 +59,7 @@ export default function Hero() {
           </div>
           <div className="hidden lg:block relative">
             <div className="w-full aspect-square relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-full blur-[100px]"></div>
+              <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent rounded-full blur-[100px]"></div>
               <div className="relative z-10 w-full h-full flex items-center justify-center">
                 <div className="w-[80%] h-[80%] border border-primary/30 rounded-full animate-pulse flex items-center justify-center">
                   <div className="w-[70%] h-[70%] border border-primary/20 rounded-xl rotate-45 flex items-center justify-center">
@@ -48,7 +72,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-linear-to-t from-background to-transparent"></div>
       </section>
     </main>
   );
