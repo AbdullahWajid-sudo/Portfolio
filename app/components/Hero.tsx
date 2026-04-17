@@ -9,7 +9,7 @@ export default function Hero() {
         className="relative min-h-screen flex items-center pt-20 overflow-hidden grid-bg"
         id="home"
       >
-        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="w-full max-w-300 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/20">
               <span className="w-2 h-2 rounded-full bg-tertiary"></span>
@@ -45,16 +45,17 @@ export default function Hero() {
               Crafting high-performance digital systems that blend speed,
               intelligence, and refined design.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button className="bg-primary text-on-primary-fixed px-8 py-4 rounded-lg font-headline font-bold flex items-center gap-2 shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform">
-                Explore My Work
+            <div className="flex flex-wrap gap-4 pt-2">
+              <a
+                className="bg-primary text-on-primary-fixed px-8 py-4 rounded-lg font-headline font-bold flex items-center gap-2 shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform"
+                href="/Abdullah Resume.pdf"
+                download="Abdullah Resume.pdf"
+              >
+                My Resume
                 <span className="material-symbols-outlined text-lg">
-                  arrow_outward
+                  download
                 </span>
-              </button>
-              <button className="glass-card border border-white/10 text-on-surface px-8 py-4 rounded-lg font-headline font-bold hover:bg-white/5 transition-all">
-                About Me
-              </button>
+              </a>
             </div>
           </div>
           <div className="hidden lg:block relative">

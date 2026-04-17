@@ -19,27 +19,27 @@ export default function About() {
                   Discovery
                 </label>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">
-                  Ethereal Craftsmanship meets Technical Rigor.
+                  Technical Precision meets Creative Vision.
                 </h2>
               </div>
               <div className="space-y-6 text-on-surface-variant text-lg leading-relaxed font-light">
                 <p>
-                  Based in the intersection of design and development, I
-                  specialize in crafting digital interfaces that feel alive. My
-                  approach is rooted in the Ethereal Architect philosophy—where
-                  every pixel is intentional and every interaction is seamless.
+                  Based at the intersection of robust engineering and modern
+                  design, I specialize in building full-stack applications that
+                  scale. My approach is rooted in clean code architecture—where
+                  every function is intentional and every user flow is seamless.
                 </p>
                 <p>
-                  With over 5 years of experience building scalable systems, I
-                  transform complex requirements into elegant, high-performance
-                  solutions that push the boundaries of whats possible on the
-                  modern web.
+                  With a deep focus on the JavaScript ecosystem and AI
+                  integration, I transform complex business logic into
+                  high-performance digital solutions that push the boundaries of
+                  the modern web.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8">
                 <div className="space-y-1">
                   <div className="text-3xl font-headline font-bold text-primary">
-                    05+
+                    01+
                   </div>
                   <div className="text-xs uppercase tracking-widest text-on-surface-variant font-label">
                     Years Exp
@@ -47,7 +47,7 @@ export default function About() {
                 </div>
                 <div className="space-y-1">
                   <div className="text-3xl font-headline font-bold text-primary">
-                    40+
+                    10+
                   </div>
                   <div className="text-xs uppercase tracking-widest text-on-surface-variant font-label">
                     Projects
@@ -55,10 +55,10 @@ export default function About() {
                 </div>
                 <div className="space-y-1">
                   <div className="text-3xl font-headline font-bold text-primary">
-                    12
+                    3+
                   </div>
                   <div className="text-xs uppercase tracking-widest text-on-surface-variant font-label">
-                    Awards
+                    Certifications
                   </div>
                 </div>
               </div>

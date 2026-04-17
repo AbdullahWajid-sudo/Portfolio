@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const sections = ["home", "about", "skills", "projects", "contact"];
+const sections = ["home", "about", "experience", "skills", "projects", "contact"];
 export default function Navbar() {
   const [active, setActive] = useState("home");
 
@@ -40,7 +40,11 @@ export default function Navbar() {
           {sections.map((sec) => (
             <button
               key={sec}
-              onClick={() => document.getElementById(sec)?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById(sec)
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
               className={`transition ${
                 active === sec
                   ? "text-blue-200 border-b-2 border-blue-200 pb-1 font-headline tracking-tight"
@@ -51,7 +55,14 @@ export default function Navbar() {
             </button>
           ))}
         </div>
-        <button className="bg-primary text-on-primary px-6 py-2 rounded font-headline font-bold scale-95 active:scale-90 hover:bg-white/5 transition-all duration-300">
+        <button
+          onClick={() =>
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="bg-primary text-on-primary-fixed px-4 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform"
+        >
           Hire Me
         </button>
       </div>
