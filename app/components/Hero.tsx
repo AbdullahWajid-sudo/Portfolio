@@ -1,6 +1,7 @@
 "use client";
 
 import { TypeAnimation } from "react-type-animation";
+import Hero3D from "./Hero3D";
 
 export default function Hero() {
   return (
@@ -61,15 +62,7 @@ export default function Hero() {
           <div className="hidden lg:block relative">
             <div className="w-full aspect-square relative">
               <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent rounded-full blur-[100px]"></div>
-              <div className="relative z-10 w-full h-full flex items-center justify-center">
-                <div className="w-[80%] h-[80%] border border-primary/30 rounded-full animate-pulse flex items-center justify-center">
-                  <div className="w-[70%] h-[70%] border border-primary/20 rounded-xl rotate-45 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[120px] text-primary/40">
-                      language
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <Hero3D />
             </div>
           </div>
         </div>

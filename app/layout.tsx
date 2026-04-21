@@ -43,7 +43,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+      <body className="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary"
+      suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

@@ -6,26 +6,33 @@ export interface Projects {
   link: string;
 }
 
-export const projects: Projects[] =[
-    {
-        id: 1,
-        title: "Personal Portfolio Website",
-        technologies: ["React", "Tailwind CSS", "Framer Motion"],
-        image: "/projects/portfolio.png",
-        link: "https://abdullahwajid.com",
-    },
-    {
-        id: 2,
-        title: "E-commerce Platform",
-        technologies: ["Next.js", "Stripe API", "MongoDB"],
-        image: "/projects/ecommerce.png",
-        link: "https://ecommerce.abdullahwajid.com",
-    },
-    {
-        id: 3,
-        title: "Social Media App",
-        technologies: ["React", "Node.js", "Socket.io"],
-        image: "/projects/social-media.png",
-        link: "https://socialmedia.abdullahwajid.com    ",
-    },
+export const projects: Projects[] = [
+  {
+    id: 1,
+    title: "Quiz APP",
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    image: "/projects/one.jpg",
+    link: "https://abdullahwajid.com",
+  },
+  {
+    id: 2,
+    title: "ToDo App",
+    technologies: ["Next.js", "Stripe API", "MongoDB"],
+    image: "/projects/two.jpg",
+    link: "https://ecommerce.abdullahwajid.com",
+  },
+  {
+    id: 3,
+    title: "speach to text app",
+    technologies: ["Python", "Flask", "OpenAI API"],
+    image: "/projects/three.jpg",
+    link: "https://socialmedia.abdullahwajid.com    ",
+  },
+  {
+    id: 4,
+    title: "Chatbot Application",
+    technologies: ["Python", "Flask", "OpenAI API"],
+    image: "/projects/three.jpg",
+    link: "https://socialmedia.abdullahwajid.com    ",
+  },
 ];

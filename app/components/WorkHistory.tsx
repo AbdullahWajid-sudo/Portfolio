@@ -2,7 +2,7 @@ export default function WorkHistory() {
   return (
     <main>
       <section
-        className="py-32 bg-background relative overflow-hidden"
+        className="py-32 grid-bg relative overflow-hidden"
         id="experience"
       >
         <div className="max-w-7xl mx-auto px-8 relative z-10">
