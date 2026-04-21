@@ -19,30 +19,30 @@ export default function WorkHistory() {
               <div className="hidden md:flex flex-1 justify-end pr-12 text-right pt-2">
                 <div className="space-y-2">
                   <p className="text-primary font-headline font-bold text-xl">
-                    2022 — Present
+                    Dec 2025 — Present
                   </p>
                   <p className="text-on-surface-variant text-xs font-label uppercase tracking-widest">
-                    San Francisco, CA
+                    Lahore, PAK
                   </p>
                 </div>
               </div>
-              <div className="relative z-20 flex-shrink-0 w-10 h-10 rounded-full bg-surface-container-high border-4 border-background flex items-center justify-center group-hover:scale-110 group-hover:border-primary/50 transition-all">
+              <div className="relative z-20 shrink-0 w-10 h-10 rounded-full bg-surface-container-high border-4 border-background flex items-center justify-center group-hover:scale-110 group-hover:border-primary/50 transition-all">
                 <div className="w-2 h-2 rounded-full bg-primary"></div>
               </div>
               <div className="flex-1 pl-8 md:pl-12 space-y-4 pt-1">
                 <div className="md:hidden mb-2">
                   <span className="text-primary font-headline font-bold">
-                    2022 — Present
+                    Dec 2025 — Present
                   </span>
                 </div>
                 <div className="bento-card p-8 rounded-2xl space-y-4">
                   <div className="flex flex-wrap justify-between items-start gap-4">
                     <div>
                       <h3 className="text-2xl font-headline font-bold text-white">
-                        Lead Experience Architect
+                        Web Developer
                       </h3>
                       <p className="text-tertiary font-label uppercase tracking-widest text-xs font-bold mt-1">
-                        Stellar Systems Inc.
+                        Eyra Tech.
                       </p>
                     </div>
                     <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">
@@ -57,9 +57,10 @@ export default function WorkHistory() {
                         </span>
                       </span>
                       <span>
-                        Orchestrated the migration of legacy architecture to a
-                        micro-frontend ecosystem, improving deployment velocity
-                        by 40%.
+                        Full-Stack Dev: Engineered scalable full-stack web
+                        applications using React.js and Next.js, improving page
+                        load speeds by 25% through optimized component rendering
+                        and Tailwind CSS
                       </span>
                     </li>
                     <li className="flex gap-3">
@@ -69,9 +70,9 @@ export default function WorkHistory() {
                         </span>
                       </span>
                       <span>
-                        Led a design system overhaul focusing on glassmorphic
-                        aesthetics and accessibility, resulting in a 25%
-                        increase in user retention.
+                        Data & Auth: Integrated Firebase authentication and
+                        real-time database, improving data sync efficiency by
+                        40%
                       </span>
                     </li>
                     <li className="flex gap-3">
@@ -81,8 +82,8 @@ export default function WorkHistory() {
                         </span>
                       </span>
                       <span>
-                        Mentored a team of 12 developers across 3 timezones to
-                        deliver enterprise-grade fintech solutions.
+                        Project Migration: Scaled a Quiz and Todo app by
+                        migrating local storage to cloud databases
                       </span>
                     </li>
                   </ul>
@@ -94,20 +95,20 @@ export default function WorkHistory() {
               <div className="flex-1 pr-8 md:pr-12 space-y-4 pt-1 order-2 md:order-1">
                 <div className="md:hidden mb-2">
                   <span className="text-primary font-headline font-bold">
-                    2020 — 2022
+                    Mar 2025 — Sep 2025
                   </span>
                 </div>
                 <div className="bento-card p-8 rounded-2xl space-y-4">
                   <div className="flex flex-wrap justify-between items-start gap-4">
                     <div>
                       <h3 className="text-2xl font-headline font-bold text-white">
-                        Senior Interactive Developer
+                        Shopify Developer
                       </h3>
                       <p className="text-tertiary font-label uppercase tracking-widest text-xs font-bold mt-1">
-                        Ethereal Studio
+                        Freelancer
                       </p>
                     </div>
-                    <span className="px-3 py-1 bg-white/5 text-on-surface-variant text-[10px] font-bold rounded-full border border-white/10">
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">
                       CONTRACT
                     </span>
                   </div>
@@ -119,8 +120,9 @@ export default function WorkHistory() {
                         </span>
                       </span>
                       <span>
-                        Developed high-fidelity WebGL experiments using Three.js
-                        for luxury brand campaigns.
+                        Engineered high-performance Shopify storefronts by
+                        optimizing Liquid logic and implementing lazy-loading
+                        strategies to achieve sub-second load times.
                       </span>
                     </li>
                     <li className="flex gap-3">
@@ -130,23 +132,24 @@ export default function WorkHistory() {
                         </span>
                       </span>
                       <span>
-                        Optimized Core Web Vitals across a high-traffic
-                        portfolio, achieving perfect 100/100 Lighthouse scores.
+                        Reduced layout shift (CLS) across product pages by
+                        refining custom CSS architectures, ensuring a perfect
+                        100/100 Lighthouse performance score.
                       </span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="relative z-20 flex-shrink-0 w-10 h-10 rounded-full bg-surface-container-high border-4 border-background flex items-center justify-center group-hover:scale-110 group-hover:border-primary/50 transition-all order-1 md:order-2">
+              <div className="relative z-20 shrink-0 w-10 h-10 rounded-full bg-surface-container-high border-4 border-background flex items-center justify-center group-hover:scale-110 group-hover:border-primary/50 transition-all order-1 md:order-2">
                 <div className="w-2 h-2 rounded-full bg-primary/60"></div>
               </div>
               <div className="hidden md:flex flex-1 justify-start pl-12 text-left pt-2 order-3">
                 <div className="space-y-2">
                   <p className="text-primary font-headline font-bold text-xl">
-                    2020 — 2022
+                    Mar 2025 — Sept 2025
                   </p>
                   <p className="text-on-surface-variant text-xs font-label uppercase tracking-widest">
-                    New York, NY
+                    Remote
                   </p>
                 </div>
               </div>
@@ -156,34 +159,34 @@ export default function WorkHistory() {
               <div className="hidden md:flex flex-1 justify-end pr-12 text-right pt-2">
                 <div className="space-y-2">
                   <p className="text-primary font-headline font-bold text-xl">
-                    2018 — 2020
+                    Aug 2024 — Jan 2025
                   </p>
                   <p className="text-on-surface-variant text-xs font-label uppercase tracking-widest">
-                    Remote
+                    Lahore, PAK
                   </p>
                 </div>
               </div>
-              <div className="relative z-20 flex-shrink-0 w-10 h-10 rounded-full bg-surface-container-high border-4 border-background flex items-center justify-center group-hover:scale-110 group-hover:border-primary/50 transition-all">
+              <div className="relative z-20 shrink-0 w-10 h-10 rounded-full bg-surface-container-high border-4 border-background flex items-center justify-center group-hover:scale-110 group-hover:border-primary/50 transition-all">
                 <div className="w-2 h-2 rounded-full bg-primary/40"></div>
               </div>
               <div className="flex-1 pl-8 md:pl-12 space-y-4 pt-1">
                 <div className="md:hidden mb-2">
                   <span className="text-primary font-headline font-bold">
-                    2018 — 2020
+                    Aug 2024 — Jan 2025
                   </span>
                 </div>
                 <div className="bento-card p-8 rounded-2xl space-y-4">
                   <div className="flex flex-wrap justify-between items-start gap-4">
                     <div>
                       <h3 className="text-2xl font-headline font-bold text-white">
-                        Frontend Specialist
+                        AI Developer
                       </h3>
                       <p className="text-tertiary font-label uppercase tracking-widest text-xs font-bold mt-1">
-                        Nova Core Labs
+                        Marham
                       </p>
                     </div>
-                    <span className="px-3 py-1 bg-white/5 text-on-surface-variant text-[10px] font-bold rounded-full border border-white/10">
-                      JUNIOR
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full border border-primary/20">
+                      INTERN
                     </span>
                   </div>
                   <ul className="space-y-3 text-on-surface-variant font-light text-sm md:text-base leading-relaxed">
@@ -194,8 +197,10 @@ export default function WorkHistory() {
                         </span>
                       </span>
                       <span>
-                        Built responsive, component-driven UI libraries using
-                        React and Styled Components.
+                        Engineered and deployed custom LLM-powered chatbots
+                        using OpenAI APIs and Dialogflow, implementing advanced
+                        NLP techniques to handle complex user queries and intent
+                        recognition.
                       </span>
                     </li>
                     <li className="flex gap-3">
@@ -205,8 +210,10 @@ export default function WorkHistory() {
                         </span>
                       </span>
                       <span>
-                        Collaborated with UX researchers to translate prototype
-                        findings into functional production features.
+                        Developed a high-accuracy Speech-to-Text (STT) system
+                        integrated with Vertex AI, streamlining data
+                        transcription workflows and improving accessibility
+                        within web applications.
                       </span>
                     </li>
                   </ul>

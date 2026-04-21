@@ -1,3 +1,5 @@
+import AnimatedNumber from "./AnimatedNumber";
+
 export default function About() {
   return (
     <main>
@@ -8,7 +10,7 @@ export default function About() {
               <div className="absolute -inset-4 bg-primary/10 rounded-2xl blur-2xl group-hover:bg-primary/20 transition-all"></div>
               <img
                 alt="Portrait of Tajmirul"
-                className="relative rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-[4/5] w-full border border-white/5"
+                className="relative rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-4/5 w-full border border-white/5"
                 data-alt="Professional portrait of a male developer in dark clothing, moody dramatic side lighting, high contrast, minimalist background"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZ7Jbw3AcyAvDNMZaooSUYZas6iFDsqEFYhWWK2SOXja0OB0llwuzlFXjXRpb1nJIDLpCe_J0hC_DDROpNBOFWOkxNPucQexOIzs1HgRfwZygBCzNKDEsNYUrKqV4jkKdnm4OHsGh94wpYmEvwnW6OOHO9uxUuEX6eC1MBEU7YmfnsgcHzs3_CAZAcnGV2kqyYPFIdEtVXd4dO3J3aZigjrxUm5xhbd-nCtgwxWsQTUeOeRV51Pw9DoLJNLINe3aEKqJZeNhwPTM"
               />
@@ -36,10 +38,10 @@ export default function About() {
                   the modern web.
                 </p>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8" id="stats-section">
                 <div className="space-y-1">
                   <div className="text-3xl font-headline font-bold text-primary">
-                    01+
+                    <AnimatedNumber target={1} suffix="+" />
                   </div>
                   <div className="text-xs uppercase tracking-widest text-on-surface-variant font-label">
                     Years Exp
@@ -47,7 +49,7 @@ export default function About() {
                 </div>
                 <div className="space-y-1">
                   <div className="text-3xl font-headline font-bold text-primary">
-                    10+
+                    <AnimatedNumber target={10} suffix="+" />
                   </div>
                   <div className="text-xs uppercase tracking-widest text-on-surface-variant font-label">
                     Projects
@@ -55,7 +57,7 @@ export default function About() {
                 </div>
                 <div className="space-y-1">
                   <div className="text-3xl font-headline font-bold text-primary">
-                    3+
+                    <AnimatedNumber target={3} suffix="+" />
                   </div>
                   <div className="text-xs uppercase tracking-widest text-on-surface-variant font-label">
                     Certifications

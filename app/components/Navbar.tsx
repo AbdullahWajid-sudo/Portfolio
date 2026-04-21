@@ -2,7 +2,14 @@
 
 import { useEffect, useState } from "react";
 
-const sections = ["home", "about", "experience", "skills", "projects", "contact"];
+const sections = [
+  "home",
+  "about",
+  "experience",
+  "skills",
+  "projects",
+  "contact",
+];
 export default function Navbar() {
   const [active, setActive] = useState("home");
 
@@ -55,16 +62,30 @@ export default function Navbar() {
             </button>
           ))}
         </div>
-        <button
-          onClick={() =>
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="bg-primary text-on-primary-fixed px-4 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform"
-        >
-          Hire Me
-        </button>
+        <div className="hidden md:flex items-center gap-8">
+          <div className="flex flex-wrap gap-4 ">
+            <a
+              className="bg-primary text-on-primary-fixed px-4 py-2 rounded-lg font-semibold  flex items-center gap-2 shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform"
+              href="/Abdullah Resume.pdf"
+              download="Abdullah Resume.pdf"
+            >
+              My Resume
+              <span className="material-symbols-outlined text-lg">
+                download
+              </span>
+            </a>
+          </div>
+          <button
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="bg-primary text-on-primary-fixed px-4 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform"
+          >
+            Hire Me
+          </button>
+        </div>
       </div>
     </nav>
   );

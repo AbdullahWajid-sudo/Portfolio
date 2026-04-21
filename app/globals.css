@@ -209,3 +209,64 @@ h3 {
     transform: none;
   }
 }
+
+.cert-carousel:hover .cert-carousel-track {
+  animation-play-state: paused;
+}
+
+.cert-carousel-track {
+  display: flex;
+  gap: 1rem;
+  animation: carousel-scroll 8s linear infinite;
+}
+
+.cert-card img {
+  transform: scale(1);
+}
+
+.cert-card:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.perspective {
+  perspective: 200px;
+}
+
+.cube-bar {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-15deg) rotateY(25deg);
+}
+
+.cube-face {
+  position: absolute;
+}
+
+.cube-front {
+  width: 100%;
+  height: 100%;
+  transform: translateZ(6px);
+}
+
+.cube-top {
+  width: 100%;
+  height: 6px;
+  transform: rotateX(90deg) translateZ(calc(100% - 3px));
+  top: 0;
+}
+
+.cube-right {
+  width: 6px;
+  height: 100%;
+  transform: rotateY(90deg) translateZ(calc(100% - 3px));
+  right: 0;
+}
