@@ -13,22 +13,17 @@ export default function Footer() {
         <div className="flex gap-8">
           <a
             className="text-neutral-500 hover:text-green-400 transition-colors font-label uppercase tracking-widest text-[10px]"
-            href="#"
+            href="https://github.com/AbdullahWajid-sudo"
           >
             GitHub
           </a>
           <a
             className="text-neutral-500 hover:text-green-400 transition-colors font-label uppercase tracking-widest text-[10px]"
-            href="#"
+            href="https://www.linkedin.com/in/abdullah-wajid/"
           >
             LinkedIn
           </a>
-          <a
-            className="text-neutral-500 hover:text-green-400 transition-colors font-label uppercase tracking-widest text-[10px]"
-            href="#"
-          >
-            Twitter
-          </a>
+
         </div>
       </div>
     </footer>

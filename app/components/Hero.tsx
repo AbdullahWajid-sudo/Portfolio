@@ -59,7 +59,7 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="hidden lg:block relative">
+          <div className="block relative">
             <div className="w-full aspect-square relative">
               <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent rounded-full blur-[100px]"></div>
               <Hero3D />

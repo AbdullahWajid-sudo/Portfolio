@@ -21,9 +21,18 @@ export default function Projects() {
               Selected Projects.
             </h2>
           </div>
+          {/* <div className="glass-card bg-black/40 backdrop-blur-md"></div> */}
           <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {initialProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {initialProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                className="project-card-wrapper"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
             ))}
             <AnimatePresence>
               {showAll &&
@@ -39,12 +48,15 @@ export default function Projects() {
                 ))}
             </AnimatePresence>
           </div>
+
           <div className="mt-32 text-center">
             <button
               onClick={() => setShowAll(!showAll)}
               className="group relative px-12 py-4 font-headline font-bold text-primary transition-all overflow-hidden border border-primary/20 rounded-full hover:border-primary"
             >
-              <span className="relative z-10">{showAll ? "Show Less" : "Explore Full Archive"}</span>
+              <span className="relative z-10">
+                {showAll ? "Show Less" : "Explore Full Archive"}
+              </span>
               <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               <span className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 text-on-primary transition-opacity duration-300">
                 {showAll ? "Show Less" : "Explore Full Archive"}

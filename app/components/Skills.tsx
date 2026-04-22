@@ -1,8 +1,15 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedCircleWithNumber } from "./AnimatedCircleWithNumber";
 import { skills } from "../data/skills";
 import { SkillCard } from "./SkillCard";
+import Image from "next/image";
 
 export default function Skills() {
+  const [selectedCert, setSelectedCert] = useState<string | null>(null);
+
   return (
     <main>
       <section
@@ -272,9 +279,12 @@ export default function Skills() {
                       .map((src, idx) => (
                         <div
                           key={`${src}-${idx}`}
-                          className="cert-card group shrink-0 w-36 sm:w-40 md:w-44 lg:w-48"
+                          className="cert-card group shrink-0 w-36 sm:w-40 md:w-44 lg:w-48 cursor-pointer"
+                          onClick={() => setSelectedCert(src)}
                         >
-                          <img
+                          <Image
+                            width={400}
+                            height={300}
                             src={src}
                             alt={`Certification ${(idx % 4) + 1}`}
                             className="w-full h-24 sm:h-28 md:h-32 object-cover rounded-3xl shadow-2xl transition-transform duration-400 ease-out group-hover:scale-105"
@@ -287,6 +297,42 @@ export default function Skills() {
             </div>
           </div>
         </div>
+
+        {/* Certification Modal */}
+        <AnimatePresence>
+          {selectedCert && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedCert(null)}
+              className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md cursor-zoom-out"
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="relative flex flex-col items-center"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={() => setSelectedCert(null)}
+                  className="absolute -top-10 right-0 text-white hover:text-primary transition-colors flex items-center gap-2 font-label uppercase tracking-widest text-xs sm:text-sm"
+                >
+                  Close
+                  <span className="material-symbols-outlined">close</span>
+                </button>
+                <Image
+                  width={800}
+                  height={600}
+                  src={selectedCert}
+                  alt="Enlarged Certification"
+                  className="max-w-[95vw] max-h-[80vh] md:max-w-4xl object-contain rounded-2xl sm:rounded-3xl shadow-2xl border border-white/10"
+                />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
     </main>
   );

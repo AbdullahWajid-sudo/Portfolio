@@ -138,6 +138,23 @@ h3 {
   animation: blink 1s infinite;
 }
 
+.premium-project-card-v2 h3 {
+  /* This invisible shadow adds a 'rim' to the letters */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure the glass overlay doesn't block clicks but adds depth */
+.glass-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
 /* Glassmorphism Card Effect */
 .glass-card {
   background: rgba(53, 52, 54, 0.4);
@@ -156,6 +173,39 @@ h3 {
   isolation: isolate;
   width: 100%;
   min-height: 500px;
+}
+
+.premium-project-card-v2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #a855f722 2%, #44525922 2%, #a955f722 2%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+.premium-project-card-v2:hover::before {
+  opacity: 1;
+}
+
+.premium-project-card-v2 img {
+  filter: brightness(0.9) saturate(0.9);
+  transition:
+    filter 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.text-shadow-premium {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.premium-project-card-v2:hover img {
+  filter: brightness(1) saturate(1);
+  box-shadow:
+    0 0 40px rgba(173, 198, 255, 0.4),
+    0 0 80px rgba(106, 39, 133, 0.3);
 }
 
 .glass-overlay {
@@ -321,3 +371,74 @@ h3 {
   transform: rotateY(90deg) translateZ(calc(100% - 3px));
   right: 0;
 }
+
+/* Project Card Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpDelay {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.premium-project-card-v2 {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.premium-project-card-v2:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(173, 198, 255, 0.2);
+}
+
+.premium-project-card-v2 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card-wrapper {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.project-card-wrapper:nth-child(1) { animation-delay: 0s; }
+.project-card-wrapper:nth-child(2) { animation-delay: 0.1s; }
+.project-card-wrapper:nth-child(3) { animation-delay: 0.2s; }
+.project-card-wrapper:nth-child(4) { animation-delay: 0.3s; }
+.project-card-wrapper:nth-child(5) { animation-delay: 0.4s; }
+.project-card-wrapper:nth-child(6) { animation-delay: 0.5s; }
