@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface AnimatedProgressProps {
   targetWidth: number;
@@ -16,6 +16,7 @@ export function AnimatedProgress({
   const [width, setWidth] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,11 +26,10 @@ export function AnimatedProgress({
           setHasStarted(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
-    const element = document.getElementById("skills-section");
-    if (element) observer.observe(element);
+    if (containerRef.current) observer.observe(containerRef.current);
 
     return () => observer.disconnect();
   }, [hasStarted]);
@@ -53,7 +53,7 @@ export function AnimatedProgress({
   }, [isVisible, targetWidth, duration]);
 
   return (
-    <div className="w-full bg-surface-container-low rounded-full h-2">
+    <div ref={containerRef} className="w-full bg-surface-container-low rounded-full h-2">
       <div
         className="h-2 rounded-full transition-all duration-300"
         style={{ width: `${width}%`, backgroundColor: color }}

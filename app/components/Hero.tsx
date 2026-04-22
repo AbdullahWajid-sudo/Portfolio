@@ -19,11 +19,11 @@ export default function Hero() {
               </span>
             </div>
             <div className="flex flex-col gap-0">
-              <h1 className="text-6xl md:text-8xl font-headline font-bold leading-none tracking-tighter text-glow">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-headline font-bold leading-none tracking-tighter text-glow">
                 I CREATE
               </h1>
-              <h1 className="text-6xl md:text-8xl font-headline font-bold leading-none tracking-tighter text-glow text-primary min-h-45 md:min-h-45">
-                <div className="block w-120">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-headline font-bold leading-none tracking-tighter text-glow text-primary min-h-30 sm:min-h-45">
+                <div className="block w-full md:w-120">
                   <TypeAnimation
                     sequence={[
                       "AI Web Apps.",

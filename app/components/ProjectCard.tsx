@@ -46,8 +46,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <motion.div
           className="space-y-4"
           variants={{
-            initial: { y: 20, opacity: 0 },
-            hover: { y: 0, opacity: 1 },
+            initial: { y: 0, opacity: 1 }, // Make visible by default
+            hover: { y: -5 }, // Add a subtle lift on hover
           }}
           transition={{ duration: 0.4 }}
         >

@@ -25,7 +25,7 @@ export function AnimatedCircleWithNumber({
           setHasStarted(true);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 },
     );
 
     if (elementRef.current) {
@@ -55,10 +55,14 @@ export function AnimatedCircleWithNumber({
 
   const fullDashArray = 301.5;
   const fullDashOffset = 30;
-  const currentOffset = fullDashArray - (progress / 100) * (fullDashArray - fullDashOffset);
+  const currentOffset =
+    fullDashArray - (progress / 100) * (fullDashArray - fullDashOffset);
 
   return (
-    <div ref={elementRef} className="relative w-32 h-32 flex items-center justify-center">
+    <div
+      ref={elementRef}
+      className="relative w-32 h-32 flex items-center justify-center"
+    >
       <svg
         className="w-full h-full -rotate-90 transform scale-110"
         viewBox="0 0 100 100"
