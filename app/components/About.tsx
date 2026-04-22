@@ -14,7 +14,7 @@ export default function About() {
                 height={1000}
                 className="relative rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-4/5 w-full border border-white/5"
                 data-alt="Professional portrait of a male developer in dark clothing, moody dramatic side lighting, high contrast, minimalist background"
-                src="/name.png"
+                src="/profile.jpg"
               />
             </div>
             <div className="lg:col-span-7 space-y-12">
