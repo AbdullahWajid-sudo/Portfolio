@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useCertModal } from "./CertModalContext";
 
 const sections = [
   "home",
@@ -12,6 +13,7 @@ const sections = [
 ];
 export default function Navbar() {
   const [active, setActive] = useState("home");
+  const { isOpen: isCertModalOpen } = useCertModal();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,7 +40,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-neutral-950/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]">
+    <nav className={`fixed top-0 w-full z-50 bg-neutral-950/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] transition-transform duration-300 ${isCertModalOpen ? "-translate-y-full" : "translate-y-0"}`}>
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <div className="text-xl font-bold tracking-tighter text-blue-200 font-headline">
           Abdullah Wajid

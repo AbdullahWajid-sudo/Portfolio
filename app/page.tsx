@@ -6,11 +6,13 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { CertModalProvider } from "./components/CertModalContext";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
+    <CertModalProvider>
+      <>
+        <Navbar />
       <div id="hero">
         <Hero />
       </div>
@@ -31,5 +33,6 @@ export default function Home() {
       </div>
       <Footer />
     </>
+    </CertModalProvider>
   );
 }

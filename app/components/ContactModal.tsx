@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -36,6 +35,17 @@ export default function ContactModal({
     resolver: zodResolver(contactSchema),
   });
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitStatus("idle");
@@ -58,7 +68,9 @@ export default function ContactModal({
         }, 2000);
       } else {
         setSubmitStatus("error");
-        setErrorMessage(result.error || "Something went wrong. Please try again.");
+        setErrorMessage(
+          result.error || "Something went wrong. Please try again.",
+        );
       }
     } catch (error) {
       console.error("Error:", error);
@@ -200,7 +212,9 @@ export default function ContactModal({
               placeholder="Tell me about your project..."
             />
             {errors.message && (
-              <p className="mt-1 text-sm text-error">{errors.message.message}</p>
+              <p className="mt-1 text-sm text-error">
+                {errors.message.message}
+              </p>
             )}
           </div>
 

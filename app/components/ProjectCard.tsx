@@ -6,34 +6,58 @@ interface ProjectCardProps {
   project: Projects;
 }
 
+const MotionImage = motion.create(Image);
+
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <motion.div
       className="group premium-project-card-v2 relative overflow-hidden rounded-3xl aspect-4/5 sm:aspect-square lg:aspect-4/5"
       whileHover="hover"
       initial="initial"
+      variants={{
+        initial: { scale: 1, y: 0 },
+        hover: { scale: 1.01, y: -8 },
+      }}
+      transition={{
+        duration: 0.5,
+        ease: [0.33, 1, 0.68, 1], // Custom quintic ease-out
+      }}
     >
-      <Image
+      <MotionImage
         alt={project.title}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+        className="absolute inset-0 w-full h-full object-cover"
         src={project.image}
         width={1100}
         height={1100}
+        variants={{
+          initial: { scale: 1 },
+          hover: { scale: 1.12 },
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.33, 1, 0.68, 1],
+        }}
       />
 
-      {/* 🔥 FIX 1: Gradient Overlay to darken the background only where text exists */}
-      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-black/60 opacity-100 transition-opacity"></div>
+      {/* Gradient Overlay */}
+      <motion.div
+        className="absolute inset-0 bg-linear-to-t from-black/95 via-black/20 to-black/40"
+        variants={{
+          initial: { opacity: 0.7 },
+          hover: { opacity: 0.9 },
+        }}
+        transition={{ duration: 0.4 }}
+      />
 
       <div className="card-content relative z-10 flex flex-col justify-between h-full p-6">
         <motion.div
           className="space-y-2"
           variants={{
             initial: { y: 0 },
-            hover: { y: -5 },
+            hover: { y: -2 },
           }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          {/* 🔥 FIX 2: Darkened background for title & Shadow */}
           <h3
             className="px-5 py-2 rounded-2xl font-headline font-bold text-2xl 
                      bg-black/40 backdrop-blur-xl border border-white/10 
@@ -46,10 +70,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <motion.div
           className="space-y-4"
           variants={{
-            initial: { y: 0, opacity: 1 }, // Make visible by default
-            hover: { y: -5 }, // Add a subtle lift on hover
+            initial: { y: 10, opacity: 0.9 },
+            hover: { y: 0, opacity: 1 },
           }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
         >
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech, index) => (
@@ -63,7 +87,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
 
-          {/* 🔥 FIX 3: Consistent high-contrast button */}
           <a
             href={project.link}
             target="_blank"
