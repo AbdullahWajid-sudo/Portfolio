@@ -48,7 +48,7 @@ export function CertificationsCard() {
           </div>
           <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full border border-white/5">
             <span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_rgba(0,229,75,0.6)]"></span>
-            <span className="text-[10px] font-label font-bold text-on-surface uppercase tracking-tighter">
+            <span className="text-[10px] font-label font-bold text-on-surface uppercase tracking-wide">
               Verified
             </span>
           </div>

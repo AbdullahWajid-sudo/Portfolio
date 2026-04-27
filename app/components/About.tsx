@@ -19,10 +19,10 @@ export default function About() {
             </div>
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-4">
-                <label className="text-tertiary font-label text-xs uppercase tracking-[0.3em] font-semibold">
+                <label className="text-tertiary font-label text-xs uppercase tracking-[0.3em] font-semibold mb-2">
                   Discovery
                 </label>
-                <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight">
+                <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tight">
                   Technical Precision meets Creative Vision.
                 </h2>
               </div>
@@ -41,7 +41,7 @@ export default function About() {
                 </p>
               </div>
               <div
-                className="grid grid-cols-2 md:grid-cols-3 gap-8 pt-8"
+                className="grid grid-cols-2 md:grid-cols-3 gap-8 "
                 id="stats-section"
               >
                 <div className="space-y-1">

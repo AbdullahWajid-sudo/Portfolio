@@ -10,7 +10,7 @@ interface SkillCardProps {
 
 export function SkillCard({ skill }: SkillCardProps) {
   return (
-    <div className="bg-primary/10 border border-outline-variant/20 p-4 rounded-lg shadow-sm hover:bg-primary/20 transition-shadow h-25">
+    <div className="bg-primary/10 border border-outline-variant/20 p-4 rounded-2xl shadow-sm hover:bg-primary/20 transition-shadow h-25">
       <div className="flex items-center gap-4">
         <Image
           src={skill.icon}

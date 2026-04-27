@@ -22,17 +22,17 @@ export default function Skills() {
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-20">
             <div className="space-y-4">
-              <label className="text-primary font-label text-xs uppercase tracking-[0.4em] font-bold">
+              <label className="text-tertiary font-label text-xs uppercase tracking-[0.3em] font-semibold mb-2">
                 Technical Ecosystem
               </label>
               <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter">
                 Modern Stack.
               </h2>
+              <p className="text-on-surface-variant max-w-sm text-lg leading-relaxed font-light">
+                A high-fidelity technical infrastructure designed for
+                scalability and immersive performance.
+              </p>
             </div>
-            <p className="text-on-surface-variant max-w-sm text-lg leading-relaxed font-light">
-              A high-fidelity technical infrastructure designed for scalability
-              and immersive performance.
-            </p>
           </div>
           <div
             className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-6 gap-6 min-h-250"

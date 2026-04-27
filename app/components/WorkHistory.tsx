@@ -7,7 +7,7 @@ export default function WorkHistory() {
       >
         <div className="max-w-7xl mx-auto px-8 relative z-10">
           <div className="flex flex-col items-center mb-24 text-center">
-            <label className="text-primary font-label text-xs uppercase tracking-[0.4em] font-bold mb-4">
+            <label className="text-tertiary font-label text-xs uppercase tracking-[0.3em] font-semibold mb-2">
               Professional Odyssey
             </label>
             <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter">
@@ -51,7 +51,7 @@ export default function WorkHistory() {
                   </div>
                   <ul className="space-y-3 text-on-surface-variant font-light text-sm md:text-base leading-relaxed">
                     <li className="flex gap-3">
-                      <span className="text-primary mt-1.5 shrink-0">
+                      <span className="text-primary shrink-0">
                         <span className="material-symbols-outlined text-sm">
                           circle
                         </span>
@@ -64,7 +64,7 @@ export default function WorkHistory() {
                       </span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary mt-1.5 shrink-0">
+                      <span className="text-primary shrink-0">
                         <span className="material-symbols-outlined text-sm">
                           circle
                         </span>
@@ -76,7 +76,7 @@ export default function WorkHistory() {
                       </span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary mt-1.5 shrink-0">
+                      <span className="text-primary shrink-0">
                         <span className="material-symbols-outlined text-sm">
                           circle
                         </span>
@@ -114,7 +114,7 @@ export default function WorkHistory() {
                   </div>
                   <ul className="space-y-3 text-on-surface-variant font-light text-sm md:text-base leading-relaxed">
                     <li className="flex gap-3">
-                      <span className="text-primary mt-1.5 shrink-0">
+                      <span className="text-primary shrink-0">
                         <span className="material-symbols-outlined text-sm">
                           circle
                         </span>
@@ -126,7 +126,7 @@ export default function WorkHistory() {
                       </span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary mt-1.5 shrink-0">
+                      <span className="text-primary shrink-0">
                         <span className="material-symbols-outlined text-sm">
                           circle
                         </span>
@@ -191,7 +191,7 @@ export default function WorkHistory() {
                   </div>
                   <ul className="space-y-3 text-on-surface-variant font-light text-sm md:text-base leading-relaxed">
                     <li className="flex gap-3">
-                      <span className="text-primary mt-1.5 shrink-0">
+                      <span className="text-primary shrink-0">
                         <span className="material-symbols-outlined text-sm">
                           circle
                         </span>
@@ -204,7 +204,7 @@ export default function WorkHistory() {
                       </span>
                     </li>
                     <li className="flex gap-3">
-                      <span className="text-primary mt-1.5 shrink-0">
+                      <span className="text-primary shrink-0">
                         <span className="material-symbols-outlined text-sm">
                           circle
                         </span>

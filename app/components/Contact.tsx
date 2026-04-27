@@ -33,17 +33,17 @@ export default function Contact() {
               </button>
               <div className="flex gap-4">
                 <a
-                  className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors"
+                  className="w-17 h-17 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors"
                   href="https://wa.me/03334460145"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span>
                     <Image
-                      src="/icons/whatsapp.png"
+                      src="/icons/icons8-whatsapp-50.png"
                       alt="WhatsApp"
-                      width={100}
-                      height={100}
+                      width={50}
+                      height={50}
                     />
                   </span>
                 </a>

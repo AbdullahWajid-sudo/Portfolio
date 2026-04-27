@@ -10,7 +10,7 @@ export function CloudInfrastructure() {
         </div>
         <div className="flex items-center gap-2 bg-black/40 px-3 py-1.5 rounded-full border border-white/5">
           <span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_rgba(0,229,75,0.6)]"></span>
-          <span className="text-[10px] font-label font-bold text-on-surface uppercase tracking-tighter">
+          <span className="text-[10px] font-label font-bold text-on-surface uppercase tracking-wide">
             Cloud
           </span>
         </div>
@@ -23,12 +23,11 @@ export function CloudInfrastructure() {
           SERVERLESS ARCHITECTURES
         </p>
         <div className="mt-4 space-y-2 z-10">
-          <p className="text-m text-on-surface-variant/80 font-light leading-relaxed">
-            Leveraging serverless architectures and real-time databases
-            to build scalable, secure, and highly responsive web
-            applications.
+          <p className="text-md text-on-surface-variant/80 font-light leading-relaxed">
+            Leveraging serverless architectures and real-time databases to build
+            scalable, secure, and highly responsive web applications.
           </p>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-2 flex-wrap mt-4">
             <div className="flex items-center gap-2 bg-black/30 border border-white/10 px-4 py-2 rounded-lg">
               <span className="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(173,198,255,0.6)]"></span>
               <span className="text-[12px] font-label font-bold text-on-surface">

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useCertModal } from "./CertModalContext";
+import Image from "next/image";
 
 const sections = [
   "home",
@@ -40,10 +41,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 bg-neutral-950/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] transition-transform duration-300 ${isCertModalOpen ? "-translate-y-full" : "translate-y-0"}`}>
+    <nav
+      className={`fixed top-0 w-full z-50 bg-neutral-950/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] transition-transform duration-300 ${isCertModalOpen ? "-translate-y-full" : "translate-y-0"}`}
+    >
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <div className="text-xl font-bold tracking-tighter text-blue-200 font-headline">
-          Abdullah Wajid
+        <div className="text-xl flex flex-row font-bold tracking-tighter text-blue-200 font-headline">
+          <Image src="/NavLogo.webp" alt="alt" width={60} height={60} />
+          <h2 className="ml-2 mt-4">Abdullah Wajid</h2>
         </div>
         <div className="hidden md:flex items-center gap-8">
           {sections.map((sec) => (
@@ -72,7 +76,7 @@ export default function Navbar() {
               download="Abdullah Resume.pdf"
             >
               My Resume
-              <span className="material-symbols-outlined text-lg">
+              <span className="material-symbols-outlined text-sm">
                 download
               </span>
             </a>

@@ -14,7 +14,7 @@ export default function Projects() {
       <section className="py-32 bg-background overflow-hidden" id="projects">
         <div className="max-w-7xl mx-auto px-8 relative">
           <div className="mb-24 text-center space-y-4">
-            <label className="text-primary font-label text-xs uppercase tracking-[0.4em] font-bold">
+            <label className="text-tertiary font-label text-xs uppercase tracking-[0.3em] font-semibold mb-2  ">
               Featured Archives
             </label>
             <h2 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter">
